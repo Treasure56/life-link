@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Life Link e-Ambulance Web Application
+
 
 ## Getting Started
 
-First, run the development server:
-
+### Running the project
 ```bash
+# For development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# For Production server
+npm run build
+npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Overview
 
-## Learn More
+Life Link e-Ambulance is a web application designed to streamline emergency medical services. It allows users to quickly request and book ambulances based on their location and specific needs.
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- User-friendly interface for booking ambulances
+- Real-time location tracking
+- Various ambulance types (AC, Non-AC, ICU, ICCU)
+- Detailed ambulance information and pricing
+- Contact form for inquiries and support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technology Stack
 
-## Deploy on Vercel
+- Next.js 14 (React framework)
+- TypeScript
+- Tailwind CSS for styling
+- Shadcn UI components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app`: Contains the main application pages and components
+- `src/components`: Reusable UI components
+- `src/types`: TypeScript type definitions
+- `src/hooks`: Custom React hooks
+
+## Key Components
+
+- `SearchPage`: Allows users to search and filter available ambulances
+- `ContactPage`: Provides contact information and a form for user inquiries
+- `LocationSelect`: Component for selecting user location
+
+## Running the Project
+
+After starting the development server, you can:
+
+- View the main page at [http://localhost:3000](http://localhost:3000)
+- Access the search page at [http://localhost:3000/search](http://localhost:3000/search)
+- Visit the contact page at [http://localhost:3000/contact](http://localhost:3000/contact)
+
+
+

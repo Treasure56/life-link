@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { EAbulance } from '@/types/eabulance'
 import { Truck } from 'lucide-react'
+import Link from 'next/link'
 
 
-export default function AmbulanceCard({ name, vehicleType, img, location, price }: EAbulance) {
+export default function AmbulanceCard({ id, name, vehicleType, img, location, price }: EAbulance) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <div className="relative">
@@ -44,9 +45,11 @@ export default function AmbulanceCard({ name, vehicleType, img, location, price 
         </div>
         <div className="flex justify-between items-center">
           <span className="text-2xl font-bold text-primary">${price.toFixed(2)}</span>
-          <button className="bg-primary hover:bg-green-900 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
+          <Link
+          href={`/ambulance/${id}`}
+           className="bg-primary hover:bg-green-900 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
             Book Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

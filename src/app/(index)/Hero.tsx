@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Search } from "lucide-react"
+import { searchAction } from "@/actions/search"
 
 export default function HeroSection() {
   return (
@@ -26,17 +27,17 @@ export default function HeroSection() {
         </p>
         
         {/* Search Input */}
-        <div className="flex max-w-md mx-auto">
-          <Input 
+        <form action={searchAction} className="flex max-w-md mx-auto">
+          <Input name="query"
             type="text" 
-            placeholder="Search the for abulance" 
+            placeholder="Search the for ambulance" 
             className="flex-grow bg-white text-neutral-700"
           />
           <Button type="submit" className="ml-2">
             <Search className="h-4 w-4 mr-2" />
             Search
           </Button>
-        </div>
+        </form>
       </div>
     </section>
   )

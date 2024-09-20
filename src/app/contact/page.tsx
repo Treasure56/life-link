@@ -70,7 +70,7 @@ export default function ContactPage() {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full"
+                  className="w-full bg-white"
                 />
               </div>
               <div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full"
+                  className="w-full bg-white"
                 />
               </div>
               <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="w-full"
+                  className="w-full bg-white"
                   rows={4}
                 />
               </div>
