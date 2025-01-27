@@ -6,10 +6,10 @@ export default function AboutPage() {
     <div className="bg-gray-50 min-h-screen">
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">About Life Link eAmbulance</h1>
+          <h1 className="text-3xl max-md:text-xl font-bold text-gray-900">About Life Link eAmbulance</h1>
         </div>
       </header>
-      <main>
+      <main className='px-5'>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {/* Introduction Section */}
           <div className="px-4 py-6 sm:px-0">
@@ -21,7 +21,7 @@ export default function AboutPage() {
           </div>
 
           {/* Key Features Section */}
-          <div className="mt-10">
+          <div className="mt-10 ">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Life Link eAmbulance?</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {/* Prompt Assistance */}

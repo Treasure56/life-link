@@ -3,7 +3,6 @@ import { EAbulance } from '@/types/eabulance'
 import { Truck } from 'lucide-react'
 import Link from 'next/link'
 
-
 export default function AmbulanceCard({ id, name, vehicleType, img, location, price }: EAbulance) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -11,14 +10,14 @@ export default function AmbulanceCard({ id, name, vehicleType, img, location, pr
         <img
           src={img}
           alt={`${name} - ${vehicleType}`}
-          className="transition-transform duration-300 ease-in-out w-full aspect-square"
+          className="transition-transform duration-300 ease-in-out w-full h-48 object-cover sm:h-64 md:h-72 lg:h-80"
         />
       </div>
       <div className="p-4">
-        <h2 className="text-xl font-semibold text-gray-800 mb-2">{name}</h2>
+        <h2 className="text-lg font-semibold text-gray-800 mb-2 truncate">{name}</h2>
         <div className="flex items-center text-gray-600 mb-2">
           <Truck className="w-4 h-4 mr-2" />
-          <span>{vehicleType}</span>
+          <span className="truncate">{vehicleType}</span>
         </div>
         <div className="flex items-center text-gray-600 mb-4">
           <svg
@@ -41,13 +40,14 @@ export default function AmbulanceCard({ id, name, vehicleType, img, location, pr
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          <span>{location}</span>
+          <span className="truncate">{location}</span>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold text-primary">${price.toFixed(2)}</span>
+          <span className="text-base font-bold text-primary">${price.toFixed(2)}</span>
           <Link
-          href={`/ambulance/${id}`}
-           className="bg-primary hover:bg-green-900 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
+            href={`/ambulance/${id}`}
+            className="bg-primary hover:bg-green-900 text-white font-bold textxs py-2 px-4 rounded transition duration-300 ease-in-out"
+          >
             Book Now
           </Link>
         </div>

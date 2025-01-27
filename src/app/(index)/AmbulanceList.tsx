@@ -6,11 +6,11 @@ export default async function AmbulanceList() {
     return (
         <section className="app-container py-12">
             <h3 className="lg:text-3xl text-xl pb-6 font-semibold">Available Ambulances</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {abulanceLists.slice(0, 8).map(AmbulanceList =>
-               <AmbulanceCard  key={AmbulanceList.id} {...AmbulanceList}/> 
-            )}
-          </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {abulanceLists.slice(0, 8).map(AmbulanceList =>
+                    <AmbulanceCard key={AmbulanceList.id} {...AmbulanceList}/> 
+                )}
+            </div>
         </section>
     );
 }
